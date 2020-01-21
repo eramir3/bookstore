@@ -1,0 +1,24 @@
+package com.tutorial.bookstore;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+
+@SpringBootApplication
+public class BookstoreApplication {
+	
+	//@Autowired
+	//private UserService userService;
+	
+	@Bean
+    BCryptPasswordEncoder bCryptPasswordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
+	public static void main(String[] args) {
+		SpringApplication.run(BookstoreApplication.class, args);
+	}
+
+}
